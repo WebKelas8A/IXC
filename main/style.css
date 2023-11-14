@@ -1,0 +1,64 @@
+*{
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.4rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+header .searchbar input {
+    border-radius: 50px;
+    padding: 12px 40px;
+    font-size: 16px;
+    border: none;
+}
+header .searchbar input[type=text] {
+    width: 320px;
+    height: 40px;
+    color: black;
+    transition: 0.4s;
+    height: 40px;
+    outline: none;
+}
+header .searchbar input[type=text]:focus {
+    width: 320px;
+    height: 40px;
+}
+header .searchbar.searchActive input[type=text] {
+    width: 320px;
+    height: 40px;
+}
+header .searchbar input::-moz-placeholder {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+header .searchbar input::placeholder {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+}
+@media (max-width: 360px) {
+    header .searchbar input[type=text] {
+        width: 220px;
+        height: 40px;
+    }   
+}
