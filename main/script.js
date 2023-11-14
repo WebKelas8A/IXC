@@ -33,7 +33,8 @@ const studentsContainer = document.getElementById('studentsContainer');
         studentCard.classList.add('group', 'relative', 'block', 'bg-black');
 
         const studentLink = document.createElement('a');
-        studentLink.href = student.link;
+        // studentLink.href = student.link;
+        studentLink.href = "#";
 
         const studentImage = document.createElement('img');
         studentImage.src = student.img || student.img;
