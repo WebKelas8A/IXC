@@ -324,7 +324,7 @@ function displayResults(results) {
     studentCard.classList.add(
       "student-result",
       "bg-neutral-50/25",
-      "my-[3px]",
+      "my-[10px]",
       "pl-6",
       "w-[316px]",
       "h-[36px]",
