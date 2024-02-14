@@ -205,10 +205,16 @@ const studentsContainer = document.getElementById("studentsContainer");
 
 students.forEach((student) => {
   const studentCard = document.createElement("div");
-  studentCard.classList.add("group", "relative", "block", "bg-black");
+  studentCard.classList.add(
+    "group",
+    "relative",
+    "block",
+    "bg-black",
+  );
 
   const studentLink = document.createElement("a");
-  studentLink.href = student.link;
+  // studentLink.href = student.link;
+  studentLink.classList.add("cursor-pointer");
 
   const studentImage = document.createElement("img");
   studentImage.src = student.img || student.img;
@@ -218,6 +224,7 @@ students.forEach((student) => {
     "absolute",
     "inset-0",
     "h-full",
+    "font-bold",
     "w-full",
     "object-cover",
     "opacity-75",
@@ -236,6 +243,7 @@ students.forEach((student) => {
     "opacity-0",
     "transition-all",
     "transform",
+    "font-bold",
     "group-hover:translate-x-0",
     "group-hover:opacity-100"
   );
@@ -246,7 +254,7 @@ students.forEach((student) => {
     "font-medium",
     "uppercase",
     "tracking-widest",
-    "text-pink-500",
+    "text-red-700",
     "-translate-x-8",
     "opacity-0",
     "transition-all",
@@ -288,7 +296,7 @@ students.forEach((student) => {
   );
 
   const studentDescriptionText = document.createElement("p");
-  studentDescriptionText.classList.add("text-sm", "text-white");
+  studentDescriptionText.classList.add("text-sm", "text-white", "font-bold");
   studentDescriptionText.textContent = `Absence: ${student.absence}`;
 
   studentsContainer.appendChild(studentCard);
@@ -323,12 +331,14 @@ function displayResults(results) {
     const studentCard = document.createElement("div");
     studentCard.classList.add(
       "student-result",
-      "bg-neutral-50/25",
+      "bg-neutral-950/50",
+      "font-bold",
       "my-[10px]",
       "pl-6",
       "w-[316px]",
       "h-[36px]",
       "rounded-lg",
+      "text-red-700",
       "hover:bg-gray",
       "flex",
       "align-center"
