@@ -358,8 +358,7 @@ function displayResults(results) {
     );
 
     const studentLinkSearch = document.createElement("a");
-    studentLinkSearch.href = student.link;
-
+    studentLinkSearch.href = student.link;
     const studentName = document.createElement("h3");
     studentName.textContent = student.name;
     studentName.classList.add("text-2xl", "cursor-pointer");
